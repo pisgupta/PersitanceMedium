@@ -105,4 +105,13 @@
         android:layout_toRightOf="@+id/btnsubmit"
         android:layout_toEndOf="@+id/btnsubmit" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/btnupdate"
+        android:layout_below="@+id/edtage"
+        android:layout_toRightOf="@+id/btnselect"
+        android:layout_toEndOf="@+id/btnselect" />
+
 </RelativeLayout>
