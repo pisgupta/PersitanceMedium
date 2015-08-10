@@ -70,6 +70,45 @@ public class MainActivity extends Activity {
             }
         });
 
+        findViewById(R.id.btnwhere).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList data = con.selectAllDataWhere(edtid.getText().toString().trim());
+
+                ArrayAdapter<String> ad = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, data);
+                displaydata.setAdapter(ad);
+            }
+        });
+
+        findViewById(R.id.btnorderBy).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList data = con.selectAllDataOrderBy();
+
+                ArrayAdapter<String> ad = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, data);
+                displaydata.setAdapter(ad);
+            }
+        });
+
+        findViewById(R.id.btngroupby).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList data = con.selectAllDataGroupBy();
+                ArrayAdapter<String> ad = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, data);
+                displaydata.setAdapter(ad);
+            }
+        });
+
+        findViewById(R.id.btnHaving).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList data = con.selectAllDataHaving();
+                ArrayAdapter<String> ad = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, data);
+                displaydata.setAdapter(ad);
+            }
+        });
+
+
     }
 
     @Override

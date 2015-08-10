@@ -1,1 +1,1 @@
-include ':app', ':sahredpreference', ':filehandling'
+include ':app', ':sahredpreference', ':filehandling', ':database'
